@@ -1,9 +1,10 @@
 import os
+import funkcje.py
 
+szukaj = "PLP79729"
 os.chdir("C:\\logs")
-print(os.getcwd())
 
-print(os.listdir())
 for file in os.listdir():
     with open(file) as current:
-        print(current.readline())
+        naglowek(file)
+        znajdz(file, szukaj)
