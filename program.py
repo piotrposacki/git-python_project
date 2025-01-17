@@ -1,10 +1,10 @@
 import os
-import funkcje.py
+import funkcje
 
 szukaj = "PLP79729"
 os.chdir("C:\\logs")
 
-for file in os.listdir():
-    with open(file) as current:
-        naglowek(file)
-        znajdz(file, szukaj)
+for plik in os.listdir():
+    funkcje.naglowek(plik)
+    with open(plik) as current:
+        funkcje.znajdz(current, szukaj)
